@@ -52,5 +52,6 @@ pip3 install -U radian
 conda create -n stan -c conda-forge cmdstan
 conda activate stan
 
+
 #### install jupyter 
 conda install jupyter
