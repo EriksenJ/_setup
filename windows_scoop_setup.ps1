@@ -17,7 +17,7 @@ $appsToInstall = @(
     'julia',
     'zotero',
     'spotify',
-    'sublime-text'
+    'sublime-text',
     'tinytex',
     'ubuntu-nf',
     'ubuntumono-nf',
@@ -51,7 +51,6 @@ pip3 install -U radian
 #### install cmdstan
 conda create -n stan -c conda-forge cmdstan
 conda activate stan
-
 
 #### install jupyter 
 conda install jupyter
