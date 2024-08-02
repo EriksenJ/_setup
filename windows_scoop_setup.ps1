@@ -2,6 +2,7 @@
 # Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')
 
 # add buckets 
+scoop install git 
 scoop bucket add extras 
 scoop bucket add nerd-fonts
 scoop bucket add r-bucket https://github.com/cderv/r-bucket.git
@@ -13,6 +14,7 @@ $appsToInstall = @(
     'git',
     'r',
     'rstudio',
+    'pandoc',
     'quarto',
     'julia',
     'zotero',
@@ -26,7 +28,8 @@ $appsToInstall = @(
     'firefox',
     'obsidian',
     'miniconda3',
-    'rtools'
+    'rtools',
+    "make"
     # Add more apps as needed
 )
 
@@ -41,7 +44,7 @@ Write-Host "All apps installed successfully."
 
 #### Setup R for standard usage 
 # Install standard packages 
-Rscript -e "install.packages('pacman'); library(pacman); p_load(BiocManager, tidyverse, rio, data.table, fixest, modelsummary, knitr, showtext, extrafonts); font_import(); loadfonts(); font_add_google(c('Ubuntu', 'Ubuntu Mono', 'Ubuntu Condensed')"
+Rscript -e "install.packages('pacman'); pacman::p_load(BiocManager, tidyverse, rio, data.table, fixest, modelsummary, knitr, showtext, extrafonts); font_import(); loadfonts(); font_add_google(c('Ubuntu', 'Ubuntu Mono', 'Ubuntu Condensed')"
 
 
 #### Install radian with pip3 
@@ -54,3 +57,8 @@ conda activate stan
 
 #### install jupyter 
 conda install jupyter
+
+#### install most recent powershell 
+winget install --id Microsoft.Powershell --source winget
+
+
